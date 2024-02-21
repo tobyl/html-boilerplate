@@ -10,37 +10,118 @@
 
     <div id="chat-card">
 
-      <img src="svgs/close.svg" />
+      <header>
+        <div class="avatar">
+          <div class="img-holder">
+            <img src="images/rey.webp" alt="Megan Norton" />
+          </div>
+          <div class="status">
+            <span class="sr-only">Offline</span>
+          </div>
+        </div>
 
-      <img src="images/rey.webp" />
+        <div class="header-title">
+          <h2>Megan Norton</h2> 
+          <a href="#">@megnorton</a>
+        </div>
 
-      OFFLINE
-
-      Megan Norton 
-
-      @megnorton
-
-      <img src="svgs/phone.svg" />
-      <img src="svgs/video.svg" />
-      <img src="svgs/dots.svg" />
+        <div class="controls">
+          <button>
+            <img src="svgs/phone.svg" />
+          </button>
+          <button>
+            <img src="svgs/video.svg" />
+          </button>
+          <button>
+            <img src="svgs/dots.svg" />
+          </button>
+        </div>
+      </header>
       
-      Today
+      <section class="message-thread">
+        <h3 class="message-thread-title">
+          <span>Today</span>
+        </h3>
 
-      Hi! Next week we'll start a new project. I'll tell you all the details later.
+        <div class="msg mine">
+          <p>Hi! Next week we'll start a new project. I'll tell you all the details later.</p>
+          <time datetime="9:32">9:32</time>
+        </div>
 
-      AUDIO RECORDING
+        <div class="msg theirs">
+          <div class="audio-recording">
+            <button>
+              <img src="svgs/play.svg" />
+            </button>
+            <div class="play-bars">
+              <span class="half played"></span>
+              <span class="full played"></span>
+              <span class="three-quarter played"></span>
+              <span class="half played"></span>
+              <span class="half played"></span>
+              <span class="full played"></span>
+              <span class="two-third played"></span>
+              <span class="three-quarter played"></span>
+              <span class="half played"></span>
+              <span class="full played"></span>
+              <span class="two-third played"></span>
+              <span class="three-quarter played"></span>
+              <span class="half"></span>
+              <span class="full"></span>
+              <span class="two-third"></span>
+              <span class="three-quarter"></span>
+              <span class="half"></span>
+              <span class="full"></span>
+              <span class="two-third"></span>
+              <span class="three-quarter"></span>
+              <span class="half"></span>
+              <span class="half"></span>
+            </div>
+            <span>
+              00:35
+            </span>
+          </div>
+          <time datetime="9:32">9:32</time>
+        </div>
 
-      Here is the link to tomorrow's meeting, check it please
+        <div class="msg mine">
+          <p>
+            Here is the link to tomorrow's meeting, check it please
+          </p>
+          <time datetime="9:33">9:33</time>
+        </div>
 
-      <img src="svgs/meet-icon.svg" />
-      Project onboarding
-      meet.google.com/project
-      👍
+        <div class="msg mine">
+          <div class="meet-request">
+            <button>
+              <img src="svgs/meet-icon.svg" />
+            </button>
+            <p>
+              <span>Project onboarding</span><br />
+              <small>meet.google.com/project</small>
+            </p>
+          </div>
+          <time datetime="9:33">9:33</time>
+          <span class="reaction">👍</span>
+        </div>
 
-      <img src="svgs/paperclip.svg" />
-      Write a message
-      <img src="svgs/smiley.svg" />
-      <img src="svgs/microphone.svg" />
+        <div class="msg-entry">
+          <button>
+            <img src="svgs/paperclip.svg" />
+          </button>
+          <input type="text" placeholder="Write a message" />
+          <button>
+            <img src="svgs/smiley.svg" />
+          </button>
+          <button>
+            <img src="svgs/microphone.svg" />
+          </button>
+        </div>
+      </section>
+
+      <span class="close-btn">
+        <img src="svgs/close.svg" />
+      </span>
 
     </div> <!-- #chat-card -->
  
