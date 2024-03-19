@@ -1,20 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toby Leftly (W00001234)</title>
-    <link rel="stylesheet" href="./styles/main.css">
-  </head>
-  <body>
+<html>
 
-    <h1>Hello, world!</h1>
+<head>
+  <title>A webpage</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
 
-    new line!
-    
+<body>
+  
+  <form id="simple-form">
+
     <div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ipsum, voluptate expedita iusto est quibusdam, ut molestias in tempora consequatur sed beatae doloremque recusandae? Perspiciatis sequi ab rem debitis sit?</p>
+      <label>First Name</label>
+      <input type="text" name="first_name" />
     </div>
 
-  </body>
+    <div>
+      <label>Last Name</label>
+      <input type="text" name="last_name" />
+    </div>
+
+    <div>
+      <label>Username</label>
+      <input type="text" name="username" />
+    </div>
+
+    <div>
+      <label>Email <span>(Optional)</span></label>
+      <input type="email" name="email" />
+    </div>
+
+    <div>
+      <label>Address</label>
+      <input type="text" name="address" />
+    </div>
+
+    <div>
+      <label>Address 2 <span>(Optional)</span></label>
+      <input type="text" name="address2" />
+    </div>
+
+    <div>
+      <label>Country</label>
+      <select name="country">
+        <option>Choose...</option>
+        <option>Canada</option>
+        <option>Mexico</option>
+        <option>United States</option>
+      </select>
+    </div>
+
+    <div>
+      <label>State</label>
+      <select name="state">
+        <option>Choose...</option>
+        <option>Ontario</option>
+        <option>California</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="zip">Zip</label>
+      <input type="text" name="zip" id="zip" required>
+    </div>
+
+    <div>
+      <label>Shipping address is the same as my billing address</label>
+      <input type="checkbox" name="same-address">
+    </div>
+      
+    <button type="submit">Submit</button>
+    <button>Reset</button>
+  
+  </form>
+
+  <script>
+
+    const simpleForm = document.querySelector('#simple-form') 
+
+    const setError = (field_name, errorCopy) => {
+      // get the field div in the form
+      const field = document.querySelector(`div#${field_name}`)
+      // create a div for the error
+      const error = document.createElement('div')
+      // set the class name
+      error.className = 'field-error'
+      // set text of error div
+      error.innerText = errorCopy
+      // append the error to the field div
+      field.appendChild(error)
+    }
+
+    const handleSubmit = (event) => {
+      // prevent form from submitting via HTML
+      event.preventDefault()
+      
+      // get data from form
+      const data = new FormData(simpleForm)
+      const values = Object.fromEntries(data.entries())
+
+      // validate first_name and add error if empty string
+      if (values['first_name'] === '') {
+        setError('first_name', 'This field is required')
+      }
+
+    }
+
+    simpleForm.addEventListener('submit', handleSubmit)
+
+  </script>
+</body>
+
 </html>
