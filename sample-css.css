@@ -1,0 +1,102 @@
+* {
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    background: yellow;
+    padding: 0.25rem 0.5rem;
+    transition: transform 1s ease-out;
+}
+
+a:hover {
+    transform: scale(2);
+}
+
+#primary-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+ul * ul {
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        height 0.2s ease-out,
+        opacity 0.2s ease-out; 
+}
+
+li.dropdown:hover > ul {
+   height: 150px;
+   opacity: 1;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    top: -5rem;
+}
+
+#square {
+    position: relative;
+    width: 100px;
+    aspect-ratio: 1/1;
+    border: 2px solid orange;
+}
+
+#square span {
+    position: absolute;
+    top: -0.5rem;
+    left: calc(100% - 0.5rem);
+    width: 1rem;
+    height: 1rem;
+    background: green;
+    border-radius: 0.5rem;
+    /* animation-name: squareSlider;
+    animation-duration: 1s;
+    animation-timing-function: linear; */
+}
+
+#square:hover span {
+
+}
+
+@keyframes squareSlider {
+
+    0% { 
+        top: -0.5rem;
+        left: -0.5rem;
+    }
+
+    25% {
+        top: -0.5rem;
+        left: calc(100% - 0.5rem);
+    }
+
+    50% {
+        top: calc(100% - 0.5rem);
+        left: calc(100% - 0.5rem);
+    }
+
+    75% {
+        top: calc(100% - 0.5rem);
+        left: -0.5rem;
+    }
+
+    100% {
+        
+    }
+
+}
